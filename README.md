@@ -23,7 +23,7 @@
 * Generate app
 
     ```bash
-    ng new pwa --minimal --directory .
+    ng new pwa --directory . --minimal --routing --style css
     ```
 
 ## License
