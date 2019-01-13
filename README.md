@@ -1,11 +1,10 @@
 # warsawjs-workshop-28-pwa-boilerplate
 
-**WarsawJS Workshop #28**: Video service use PWA principles
+**WarsawJS Workshop #28**: Video service app with PWA principles
 
 ## Demo 🎉
 
-Available here:
-<https://piecioshka.github.io/warsawjs-workshop-28-pwa/>
+<https://piecioshka.github.io/warsawjs-workshop-28-pwa-boilerplate/>
 
 ## Step by step 👣
 
