@@ -1,27 +1,32 @@
-# Pwa
+# warsawjs-workshop-28-pwa-boilerplate
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+**WarsawJS Workshop #28**: Video service use PWA principles
 
-## Development server
+## Demo 🎉
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Available here:
+<https://piecioshka.github.io/warsawjs-workshop-28-pwa/>
 
-## Code scaffolding
+## Step by step 👣
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Create directory: `warsawjs-workshop-28-pwa-boilerplate`
 
-## Build
+    ```bash
+    mkdir warsawjs-workshop-28-pwa-boilerplate
+    ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* Enter to new directory
 
-## Running unit tests
+    ```bash
+    cd warsawjs-workshop-28-pwa-boilerplate
+    ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* Generate app
 
-## Running end-to-end tests
+    ```bash
+    ng new pwa --minimal --directory .
+    ```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## License
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+[The MIT License](http://piecioshka.mit-license.org) @ 2019
