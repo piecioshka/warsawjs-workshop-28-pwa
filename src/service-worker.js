@@ -15,7 +15,7 @@ const CACHED_FILES = [
 
 self.addEventListener('install', (evt) => {
   debug.log('install event');
-  evt.waitUntil(startCaching)
+  evt.waitUntil(startCaching())
 });
 
 async function startCaching() {
@@ -26,7 +26,7 @@ async function startCaching() {
 
 self.addEventListener('activate', (evt) => {
   debug.log('activate event');
-  evt.waitUntil(startActivating)
+  evt.waitUntil(startActivating())
 });
 
 async function startActivating() {
@@ -47,7 +47,7 @@ self.addEventListener('fetch', (evt) => {
     return;
   }
 
-  evt.respondWith(handleRequest);
+  evt.respondWith(handleRequest());
 });
 
 async function handleRequest(evt) {
