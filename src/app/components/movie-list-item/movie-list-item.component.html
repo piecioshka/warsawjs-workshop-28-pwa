@@ -1,0 +1,22 @@
+<div class="card">
+    <a [routerLink]="['movies', movie.id]">
+        <img
+            [src]="movie.imageUrl"
+            class="card-img-top"
+            [alt]="['Poster of ', movie.title]"
+        >
+    </a>
+    <div class="card-body">
+        <h5 class="card-title">
+            <a [routerLink]="['movies', movie.id]">{{ movie.title }}</a>
+        </h5>
+        <p class="card-text">{{ movie.description }}</p>
+        <a
+            [routerLink]="['movies', movie.id]"
+            class="btn btn-primary"
+            tabindex="-1"
+        >
+            Go to profile
+        </a>
+    </div>
+</div>
