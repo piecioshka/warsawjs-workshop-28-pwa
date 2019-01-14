@@ -1,0 +1,14 @@
+<div
+    class="media"
+    *ngIf="movie"
+>
+    <img
+        [src]="movie.imageUrl"
+        class="mr-3"
+        [alt]="['Poster of ', movie.title]"
+    >
+    <div class="media-body">
+        <h3 class="mt-0">{{ movie.title }}</h3>
+        <p>{{ movie.description }}</p>
+    </div>
+</div>
