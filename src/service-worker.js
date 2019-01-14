@@ -65,7 +65,7 @@ async function handleRequest(evt) {
   const response = await fetch(evt.request.clone());
 
   // Dodajemy do Cache
-  await cache.put(request, response);
+  await cache.put(request, response.clone());
 
   return response;
 }
