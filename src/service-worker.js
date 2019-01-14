@@ -47,7 +47,7 @@ self.addEventListener('fetch', (evt) => {
     return;
   }
 
-  evt.respondWith(handleRequest());
+  evt.respondWith(handleRequest(evt));
 });
 
 async function handleRequest(evt) {
