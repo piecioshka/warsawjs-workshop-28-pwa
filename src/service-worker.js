@@ -7,10 +7,10 @@ debug.log('Hello from Service Worker');
 
 const CACHE_NAME = 'pwa-1.0.0';
 const CACHED_FILES = [
-  '/*',
-  // 'https://picsum.photos/200/285?image=100',
-  // 'https://picsum.photos/200/285?image=200',
-  // 'https://picsum.photos/200/285?image=300',
+  '/',
+  'https://picsum.photos/200/100?image=100',
+  'https://picsum.photos/200/100?image=200',
+  'https://picsum.photos/200/100?image=300',
 ]
 
 self.addEventListener('install', (evt) => {
