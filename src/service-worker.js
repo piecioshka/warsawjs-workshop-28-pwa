@@ -32,7 +32,7 @@ self.addEventListener('activate', (evt) => {
 async function startActivating() {
   const keys = await caches.keys();
   const deleted = keys
-    .filter(key !== CACHE_NAME)
+    .filter(key => key !== CACHE_NAME)
     .map(key => caches.delete(key));
   return await Promise.all(deleted);
 }
