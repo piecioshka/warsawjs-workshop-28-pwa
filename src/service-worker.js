@@ -51,10 +51,12 @@ self.addEventListener('fetch', (evt) => {
 });
 
 async function handleRequest(evt) {
+  const request = evt.request;
+
   const cache = await caches.open(CACHE_NAME);
 
   // Spr. czy jest istnieje response na ten request w Cache
-  const resource = await cache.match(evt.request);
+  const resource = await cache.match(request);
 
   // Zasób jest w Cache — zwracamy go
   if (resource) {
@@ -62,7 +64,7 @@ async function handleRequest(evt) {
   }
 
   // Nie ma w Cache — tworzymy zapytanie HTTP
-  const response = await fetch(evt.request.clone());
+  const response = await fetch(request.clone());
 
   // Dodajemy do Cache
   await cache.put(request, response.clone());
