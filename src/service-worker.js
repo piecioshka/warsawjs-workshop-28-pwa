@@ -19,13 +19,9 @@ self.addEventListener('install', (evt) => {
 });
 
 async function startCaching() {
-  try {
-    const cache = await caches.open(CACHE_NAME);
-    // self.skipWaiting();
-    await cache.addAll(CACHED_FILES);
-  } catch (err) {
-    debug.log(err);
-  }
+  const cache = await caches.open(CACHE_NAME);
+  await cache.addAll(CACHED_FILES);
+  return await self.skipWaiting();
 }
 
 self.addEventListener('activate', (evt) => {
@@ -34,22 +30,18 @@ self.addEventListener('activate', (evt) => {
 });
 
 async function startActivating() {
-  try {
-    const keys = await caches.keys();
-    const deleted = keys
-      .filter(key !== CACHE_NAME)
-      .map(key => caches.delete(key));
-    return await Promise.all(deleted);
-  } catch (err) {
-    debug.log(err);
-  }
+  const keys = await caches.keys();
+  const deleted = keys
+    .filter(key !== CACHE_NAME)
+    .map(key => caches.delete(key));
+  return await Promise.all(deleted);
 }
 
 self.addEventListener('fetch', (evt) => {
   debug.log('fetch event', evt.request);
 
   // Spr. czy zasób pochodzi z domeny aplikacji
-  if (!new RegExp(location.host).test(evt.request.url)) {
+  if (!new RegExp(self.origin).test(evt.request.url)) {
     // Jeśli nie pochodzi - nie dodajemy do Cache-a
     debug.log('ignore request', evt.request.url);
     return;
@@ -70,10 +62,10 @@ async function handleRequest(evt) {
   }
 
   // Nie ma w Cache — tworzymy zapytanie HTTP
-  const response = await fetch(evt.request);
+  const response = await fetch(evt.request.clone());
 
   // Dodajemy do Cache
-  await cache.put(request, response.clone());
+  await cache.put(request, response);
 
   return response;
 }
