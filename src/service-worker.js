@@ -11,11 +11,11 @@ const CACHED_FILES = [
   'https://picsum.photos/200/100?image=100',
   'https://picsum.photos/200/100?image=200',
   'https://picsum.photos/200/100?image=300',
-]
+];
 
 self.addEventListener('install', (evt) => {
   debug.log('install event');
-  evt.waitUntil(startCaching())
+  evt.waitUntil(startCaching());
 });
 
 async function startCaching() {
@@ -26,13 +26,13 @@ async function startCaching() {
 
 self.addEventListener('activate', (evt) => {
   debug.log('activate event');
-  evt.waitUntil(startActivating())
+  evt.waitUntil(startActivating());
 });
 
 async function startActivating() {
   const keys = await caches.keys();
   const deleted = keys
-    .filter(key => key !== CACHE_NAME)
+    .filter(key => (key !== CACHE_NAME))
     .map(key => caches.delete(key));
   return await Promise.all(deleted);
 }

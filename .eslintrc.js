@@ -16,6 +16,8 @@ module.exports = {
 
     // http://eslint.org/docs/rules/
     rules: {
+        'arrow-parens': 'off',
+        'indent': ['on', 2],
         'no-inline-comments': 'off',
         'comma-dangle': 'off',
         'no-unused-vars': 'off',
