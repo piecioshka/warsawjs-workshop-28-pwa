@@ -8,7 +8,8 @@
     "build": "ng build",
     "test": "ng test",
     "e2e": "ng e2e",
-    "lint": "markdownlint . --ignore node_modules",
+    "lint": "eslint .",
+    "lint:md": "markdownlint . --ignore node_modules",
     "heroku-postbuild": "ng build --prod",
     "start": "http-server dist/pwa/",
     "deploy": "git push -f heroku master"

@@ -14,7 +14,7 @@ const CACHED_FILES = [
 ];
 
 self.addEventListener('install', (evt) => {
-  debug.log('Event: install' { evt });
+  debug.log('Event: install', { evt });
   evt.waitUntil(startCaching());
 });
 
