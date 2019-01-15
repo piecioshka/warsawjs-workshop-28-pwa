@@ -14,7 +14,7 @@ const CACHED_FILES = [
 ];
 
 self.addEventListener('install', (evt) => {
-  debug.log('install event');
+  debug.log('Event: install' { evt });
   evt.waitUntil(startCaching());
 });
 
@@ -25,7 +25,7 @@ async function startCaching() {
 }
 
 self.addEventListener('activate', (evt) => {
-  debug.log('activate event');
+  debug.log('Event: activate', { evt });
   evt.waitUntil(startActivating());
 });
 
@@ -38,12 +38,12 @@ async function startActivating() {
 }
 
 self.addEventListener('fetch', (evt) => {
-  debug.log('fetch event', evt.request);
+  debug.log('Event: fetch', { evt });
 
   // Spr. czy zasób pochodzi z domeny aplikacji
   if (!new RegExp(self.origin).test(evt.request.url)) {
     // Jeśli nie pochodzi - nie dodajemy do Cache-a
-    debug.log('ignore request', evt.request.url);
+    debug.log(' => ignore', evt.request.url);
     return;
   }
 
