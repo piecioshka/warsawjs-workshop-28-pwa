@@ -1,6 +1,6 @@
 # warsawjs-workshop-28-pwa
 
-**WarsawJS Workshop #28**: Video service app with PWA principles
+⛩️ WarsawJS Workshop #28 — PWA — Video service
 
 ## Demo 🎉
 
