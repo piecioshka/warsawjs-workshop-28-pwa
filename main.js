@@ -124,7 +124,7 @@ var AppModule = /** @class */ (function () {
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
-                _angular_service_worker__WEBPACK_IMPORTED_MODULE_4__["ServiceWorkerModule"].register('/service-worker.js', { enabled: src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_12__["environment"].production })
+                _angular_service_worker__WEBPACK_IMPORTED_MODULE_4__["ServiceWorkerModule"].register('/warsawjs-workshop-28-pwa/service-worker.js', { enabled: src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_12__["environment"].production })
             ],
             providers: [],
             bootstrap: [_components_app_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
