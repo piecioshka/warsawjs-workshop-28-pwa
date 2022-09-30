@@ -1,0 +1,20 @@
+[
+    {
+        "id": "k2j3b423b4k2b34jk2342j34kjnwerjk",
+        "title": "Rocky",
+        "description": "Historia Rocky'ego Balboa, boksera-amatora, któremu nadarza się okazja stoczenia walki o tytuł mistrza świata wagi ciężkiej.",
+        "imageUrl": "https://picsum.photos/200/100?image=100"
+    },
+    {
+        "id": "ljh2g34jh3g4kjhg234hjg23j4h",
+        "title": "Rambo",
+        "description": "John Rambo musi zmierzyć się z birmańskimi żołnierzami, którzy więżą chrześcijańskich misjonarzy. ",
+        "imageUrl": "https://picsum.photos/200/100?image=200"
+    },
+    {
+        "id": "sdf09sd9f0sd9fusdfusdfus9df09",
+        "title": "Terminator",
+        "description": "Elektroniczny morderca zostaje wysłany z przyszłości do roku 1984, by zabić matkę przyszłego lidera rewolucji.",
+        "imageUrl": "https://picsum.photos/200/100?image=300"
+    }
+]
