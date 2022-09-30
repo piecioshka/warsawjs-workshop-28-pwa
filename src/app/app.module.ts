@@ -27,7 +27,7 @@ import { environment } from 'src/environments/environment.prod';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ServiceWorkerModule.register('/service-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('/warsawjs-workshop-28-pwa/service-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

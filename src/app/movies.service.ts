@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { Movies } from './interfaces/movies.interface';
 import { Movie } from './interfaces/movie.interface';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class MoviesService {
   ) { }
 
   async getMovies(): Promise<Movies> {
-    return this.http.get<Movies>('/assets/movies.json').toPromise();
+    return this.http.get<Movies>(environment.moviesUrl).toPromise();
   }
 
   async getMovieById(id: string): Promise<Movie> {
