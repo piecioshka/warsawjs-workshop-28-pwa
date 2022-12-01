@@ -7,7 +7,7 @@ debug.log('Hello from Service Worker');
 
 const CACHE_NAME = 'pwa-1.0.0';
 const CACHED_FILES = [
-  '/',
+  '/warsawjs-workshop-28-pwa/',
   'https://picsum.photos/200/100?image=100',
   'https://picsum.photos/200/100?image=200',
   'https://picsum.photos/200/100?image=300',

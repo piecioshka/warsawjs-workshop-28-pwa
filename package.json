@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "pwa",
   "version": "0.0.0",
   "scripts": {
@@ -6,15 +7,13 @@
     "clear:all": "rm -rf node_modules/ && npm run clear",
     "ng": "ng",
     "build": "ng build",
+    "build:prod": "ng build --prod",
     "test": "ng test",
     "e2e": "ng e2e",
     "lint": "eslint .",
-    "lint:md": "markdownlint . --ignore node_modules",
-    "heroku-postbuild": "ng build --prod",
     "start": "http-server dist/pwa/",
-    "deploy": "git push -f heroku master"
+    "deploy": "cross-env NODE_DEBUG=gh-pages gh-pages -d dist/pwa"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~7.1.0",
     "@angular/common": "~7.1.0",
@@ -38,8 +37,10 @@
     "@angular/compiler-cli": "~7.1.0",
     "@angular/language-service": "~7.1.0",
     "@types/node": "~8.9.4",
+    "cross-env": "^7.0.3",
     "eslint": "^5.12.0",
     "eslint-config-piecioshka": "^2.0.1",
+    "gh-pages": "^4.0.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.1.6"

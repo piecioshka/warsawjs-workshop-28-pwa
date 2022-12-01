@@ -4,7 +4,7 @@
 
 ## Demo 🎉
 
-<https://warsawjs-workshop-28-pwa.herokuapp.com>
+https://piecioshka.github.io/warsawjs-workshop-28-pwa
 
 ## Step by step 👣
 
@@ -124,7 +124,7 @@
 
 </details>
 
-## CSS Framework - [Bootstrap](https://getbootstrap.com/)
+### CSS Framework - [Bootstrap](https://getbootstrap.com/)
 
 <details>
 
@@ -148,7 +148,7 @@
 
 </details>
 
-## Service Worker
+### Service Worker
 
 <details>
 
@@ -169,37 +169,21 @@
 
 </details>
 
-## Deployment — Heroku
+### Deployment - GitHub Pages
 
 <details>
 
-* Create account on Heroku
-* Enter on page: <https://dashboard.heroku.com/apps>
-* Create new app by clicking "New -> Create new app"
-* Enter name
-* Connect current repository with Heroku by run command:
+* Install deps:
 
-    ```bash
-    heroku git:remote -a NAME
-    ```
+    npm i -D cross-env gh-pages
 
-    Example:
+* Create a npm run-scripts task "deploy"
 
-    ```bash
-    heroku git:remote -a warsawjs-workshop-28-pwa
-    ```
+    "deploy": "cross-env NODE_DEBUG=gh-pages gh-pages -d dist/pwa"
 
-* Deploy whole app on Heroku by command:
+* Run a command
 
-    ```bash
-    git push heroku master
-    ```
-
-* Add new task in `package.json` -> `scripts`
-
-    ```text
-    "deploy": "git push -f heroku master"
-    ```
+    npm run deploy
 
 </details>
 
