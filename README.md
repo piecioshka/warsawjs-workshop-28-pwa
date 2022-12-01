@@ -78,11 +78,11 @@
 * Generate components:
 
     ```bash
-    ng generate component page-home --spec false
-    ng generate component page-movie-profile --spec false
-    ng generate component movie-list --spec false
-    ng generate component movie-list-item --spec false
-    ng generate component movie-profile --spec false
+    ng generate component page-home
+    ng generate component page-movie-profile
+    ng generate component movie-list
+    ng generate component movie-list-item
+    ng generate component movie-profile
     ```
 
 * Create `src/app/components/` and put all components there
@@ -111,7 +111,7 @@
 * Generate services:
 
     ```bash
-    ng generate service movies --spec false
+    ng generate service movies
     ```
 
 * Create (in service) methods:
