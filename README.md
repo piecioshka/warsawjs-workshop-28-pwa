@@ -10,8 +10,6 @@ https://piecioshka.github.io/warsawjs-workshop-28-pwa
 
 ### Create project
 
-<details>
-
 * Create directory: `warsawjs-workshop-28-pwa`
 
     ```bash
@@ -32,11 +30,7 @@ https://piecioshka.github.io/warsawjs-workshop-28-pwa
 
 * Run Audit: Chrome -> DevTools -> Audits -> Perform an audits
 
-</details>
-
 ### Web App Manifest
-
-<details>
 
 * Create file `src/assets/manifest.json`
 * In file `angular.json` add below record in `projects/pwa/architect/build/options/assets`
@@ -62,11 +56,7 @@ https://piecioshka.github.io/warsawjs-workshop-28-pwa
     ```
 * Use <https://pwabuilder.com/imageGenerator> to build icons
 
-</details>
-
 ### Build components structure with routing and services
-
-<details>
 
 * Create files:
     + `src/app/app.components.html`
@@ -122,11 +112,8 @@ https://piecioshka.github.io/warsawjs-workshop-28-pwa
 
     ![](docs/architecture.png)
 
-</details>
 
 ### CSS Framework - [Bootstrap](https://getbootstrap.com/)
-
-<details>
 
 * Install `bootstrap` from npm by command
 
@@ -146,11 +133,7 @@ https://piecioshka.github.io/warsawjs-workshop-28-pwa
     + `card` in `MovieListItemComponent`
     + `media object` in `MovieProfileComponent`
 
-</details>
-
 ### Service Worker
-
-<details>
 
 * Create file `src/service-worker.js`
 * Install `@angular/service-worker` from npm
@@ -167,25 +150,25 @@ https://piecioshka.github.io/warsawjs-workshop-28-pwa
 
     WARNING: Restart server (`ng serve`) after change configuration file
 
-</details>
-
 ### Deployment - GitHub Pages
-
-<details>
 
 * Install deps:
 
+    ```bash
     npm i -D cross-env gh-pages
+    ```
 
 * Create a npm run-scripts task "deploy"
 
+    ```json
     "deploy": "cross-env NODE_DEBUG=gh-pages gh-pages -d dist/pwa"
+    ```
 
 * Run a command
 
+    ```bash
     npm run deploy
-
-</details>
+    ```
 
 ## License
 
