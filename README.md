@@ -78,8 +78,8 @@ https://piecioshka.github.io/warsawjs-workshop-28-pwa
 * Create `src/app/components/` and put all components there
 * Create `src/app/components/app/` and put all files with prefix `app.component`
 * Build routing in `src/app/app-routing.module.ts`
-    + '' = PageHomeComponent
-    + 'movies/:id' = PageMovieProfileComponent
+    + `'' = PageHomeComponent`
+    + `'movies/:id' = PageMovieProfileComponent`
 
 * Add link into main header which should redirect to home page
 * Create file `src/assets/movies.json`
@@ -112,7 +112,6 @@ https://piecioshka.github.io/warsawjs-workshop-28-pwa
 
     ![](docs/architecture.png)
 
-
 ### CSS Framework - [Bootstrap](https://getbootstrap.com/)
 
 * Install `bootstrap` from npm by command
@@ -121,13 +120,11 @@ https://piecioshka.github.io/warsawjs-workshop-28-pwa
     npm i bootstrap
     ```
 
-* Add new record in `angular.json` -> `projects/pwa/architect/build/options/styles`
+* Edit: `styles.scss`
 
-    ```text
-    "node_modules/bootstrap/dist/css/bootstrap.css"
+    ```css
+    @import url('bootstrap');
     ```
-
-    WARNING: Restart server (`ng serve`) after change configuration file
 
 * Use widgets:
     + `card` in `MovieListItemComponent`
