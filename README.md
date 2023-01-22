@@ -2,7 +2,7 @@
 
 ⛩️ WarsawJS Workshop #28 — PWA — Video service
 
-## Demo 🎉
+## Preview 🎉
 
 https://piecioshka.github.io/warsawjs-workshop-28-pwa
 
