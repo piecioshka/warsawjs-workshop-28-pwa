@@ -12,7 +12,7 @@
     "test:ci": "ng test --no-watch --no-progress --browsers ChromeHeadless",
     "e2e": "ng e2e",
     "lint": "eslint .",
-    "start": "http-server dist/pwa/",
+    "start": "http-server dist/pwa/ -c-1",
     "deploy": "cross-env NODE_DEBUG=gh-pages gh-pages -d dist/pwa"
   },
   "dependencies": {
